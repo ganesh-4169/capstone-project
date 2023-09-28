@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Food Website </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-family: 'Dancing Script', cursive;
+}
+.back{
+    background-image: url("backimg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+body{
+
+    background-image: url('https://media.istockphoto.com/id/582296960/vector/thin-line-art-restaurant-and-food-industry-icons-seamless-pattern.jpg?s=612x612&w=0&k=20&c=cnGYnWvY3z4f8UaWmLBtH3DvNpWvLP2skKfIh1zVAB4=');
+
+    background-size: cover;
+}
+
+.bodypart{
+    height: 950px;
+    font-size: 22px;
+}
+.name{
+    width: 50%;
+    float: left;
+    padding: 20px;
+    font-size: 30px;
+}
+.logo img {
+    width: 8%;
+    float: left;
+    margin-top: 3px;
+    border-radius: 10px;
+    padding: 5px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 7vw;
+    background-color: rgb(248,232,217);
+    border-bottom: 2px solid rgb(252,196,124);
+    box-shadow: 0 2px 20px rgb(253,124,124);
+}
+.header ul{
+    display: flex;
+    align-items: center;
+}
+.header ul li:hover{
+       color: rgb(253,57,8);
+}
+.nav ul li{
+    padding: 0 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.sectitle{
+    text-align: center;
+    color:;
+    font-weight: normal;
+}
+.category{
+    float: left;
+    padding: 10px;
+    margin-left: 35px;
+}
+.categorydiv{
+    width: 20%;
+    border: 1px solid lightgrey;
+    box-shadow: 3px 6px red;
+    height: 300px;
+    border-radius: 10px;
+    float: left;
+    margin: 3% 2%;
+    text-align: center;
+}
+.categorydiv img{
+    width: 100%;
+    border-radius: 10px;
+    height: 60%;
+}
+.categorydiv a{
+    font-size: 30px;
+    color: black;
+    padding: 25px;
+    text-align: center;
+}
+.services img{
+    width: 200px;
+    height: 400px;
+    margin-right: 30px;
+}
+.par{
+    width: 80%;
+    margin: 0 auto auto;
+    text-align: center;
+}
+.view{
+   background-color: green;
+   color: white;
+   margin-top: 10px;
+   width: 100px;
+   padding: 5px;
+   border-radius: 10px;
+   
+}
+.view:hover{
+    background-color: indigo;
+}
+.a{
+    backface-visibility: ;
+}
+.container{
+  width: 85%;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 60px 30px 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .content .left-side{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+.content .left-side::before{
+  content: '';
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #afafb6;
+}
+.content .left-side .details{
+  margin: 14px;
+  text-align: center;
+}
+.content .left-side .details i{
+  font-size: 30px;
+  color: #3e2093;
+  margin-bottom: 10px;
+}
+.content .left-side .details .topic{
+  font-size: 18px;
+  font-weight: 500;
+}
+.content .left-side .details .text-one,
+.content .left-side .details .text-two{
+  font-size: 14px;
+  color: #afafb6;
+}
+.container .content .right-side{
+  width: 75%;
+  margin-left: 75px;
+}
+.content .right-side .topic-text{
+  font-size: 23px;
+  font-weight: 600;
+  color: #3e2093;
+}
+.right-side .input-box{
+  height: 50px;
+  width: 100%;
+  margin: 12px 0;
+}
+.right-side .input-box input,
+.right-side .input-box textarea{
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #F0F1F8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+.right-side .message-box{
+  min-height: 110px;
+}
+.right-side .input-box textarea{
+  padding-top: 6px;
+}
+.right-side .button{
+  display: inline-block;
+  margin-top: 12px;
+}
+.right-side .button input[type="button"]{
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #3e2093;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button input[type="button"]:hover{
+  background: #5029bc;
+}
+
+@media (max-width: 950px) {
+  .container{
+    width: 90%;
+    padding: 30px 40px 40px 35px ;
+  }
+  .container .content .right-side{
+   width: 75%;
+   margin-left: 55px;
+}
+}
+@media (max-width: 820px) {
+  .container{
+    margin: 40px 0;
+    height: 100%;
+  }
+  .container .content{
+    flex-direction: column-reverse;
+  }
+ .container .content .left-side{
+   width: 100%;
+   flex-direction: row;
+   margin-top: 40px;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ .container .content .left-side::before{
+   display: none;
+ }
+ .container .content .right-side{
+   width: 100%;
+   margin-left: 0;
+ }
+}
+
+
+
+    </style>
+</head>
+<form action="/dashboard"  method="GET">
+<body>
+    <div class="back">
+    <div class="header">
+     <div class="logo">
+    <img src="https://www.designhill.com/resize_img.php?atyp=page_file&pth=ft_ca_ct||404||contestfile_7&flp=1520503983-17621066955aa10caf7a86d0-99886359.jpg"  alt="">
+    <div  class="name">Vasavi catering</div>
+    </div>
+    <div class="nav">
+        <ul>
+           <a href="#">
+               <li> Home</li>
+           </a>
+           <a href="#aboutus">
+               <li> About Us </li>
+           </a>
+           <a href="#services">
+               <li> Our Services</li>
+           </a>
+           <a href="#contactus">
+               <li> contact</li>
+           </a>
+        </ul>
+    </div>
+   </div>
+       <div class="bodypart">
+        <br/>
+        <h1 class="sectitle">Select Your Category</h1>
+        
+        <div class="category" id="category">
+            <div class="categorydiv">
+                <img  src="https://cdn.weddingwishlist.com/wp-content/uploads/2019/02/Best-Wedding-Caters.jpg"/>
+                <a href="menu.html">Marriage</a><br/> <br/>
+                <button class="view"> View Menu</button>
+            </div>
+            <div class="categorydiv">
+                <img  src="https://c4.wallpaperflare.com/wallpaper/916/92/995/catering-indywidualny-wallpaper-preview.jpg"/>
+                <a href="#">Anniversary</a><br/> <br/>
+                <button class="view"> View Menu</button>
+            </div>
+            <div class="categorydiv">
+                <img  src="https://liliyum.com/cdn/shop/products/Floralwifesbirthdaycake_800x.jpg?v=1630924842"/>
+                <a href="#"> Birthday</a><br/> <br/>
+                <button class="view"> View Menu</button>
+            </div>
+            <div class="categorydiv">
+                <img  src="https://images.unsplash.com/photo-1554047310-ab6170fc7b10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d2VkZGluZyUyMHJpbmd8ZW58MHx8MHx8fDA%3D&w=1000&q=80"/>
+                <a href="#">Engagement </a><br/> <br/>
+                <button class="view"> View Menu</button>
+            </div>
+            <div class="categorydiv">
+                <img  src="https://e0.pxfuel.com/wallpapers/334/687/desktop-wallpaper-hotel-reception.jpg"/>
+                <a href="#"> Reception</a><br/> <br/>
+                <button class="view"> View Menu</button>
+            </div>
+            <div class="categorydiv">
+                <img  src="https://e1.pxfuel.com/desktop-wallpaper/806/736/desktop-wallpaper-every-mehndi-function-decoration-ideas.jpg"/>
+                <a href="#">Functions</a><br/> <br/>
+                <button class="view"> View Menu</button>
+            </div>
+            <div class="categorydiv">
+                <img  src="https://png.pngitem.com/pimgs/s/517-5170982_celebrations-festival-celebration-vector-hd-png-download.png"/>
+                <a href="#">Festival Celebrations</a><br/> <br/>
+                <button class="view"> View Menu</button>
+            </div>
+            <div class="categorydiv">
+                <img  src="https://sudsnsoda.com/storage/2021/10/What-are-the-Benefits-of-Hiring-a-Corporate-Catering-Service-scaled.jpeg"/>
+                <a href="#">corporate Service</a><br/> <br/>
+                <button class="view"> View Menu</button>
+            </div>
+        </div>
+        <br/>
+        <hr/>
+        <br/>
+    <h1 class="sectitle" id="services">Our Services</h1> 
+    <div class="services">
+ <marquee>
+  <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/pink-and-purple-food-catering-service-flyer-t-design-template-8f126dda20ab32fdfc352e9805d5904a_screen.jpg?ts=1637026643">
+  <img src="https://marketplace.canva.com/EAFrBjK_UWU/1/0/1600w/canva-green-minimalist-catering-service-facebook-post-cjAyx3Jiwmc.jpg">
+  <img src="https://i.pinimg.com/1200x/ea/0f/20/ea0f20c932ccda56b8990cef2a1cb9c1.jpg">
+ <img src="https://marketplace.canva.com/EAFuwj4gATE/1/0/1131w/canva-light-green-white-professional-food-and-catering-flyer-DOKsq_YQ5VI.jpg">
+ <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/food-service-design-template-b9248ccf0333978b7a3abfc0fd64d3a8_screen.jpg?ts=1610477933">
+ <img src="https://marketplace.canva.com/EAFrBjK_UWU/1/0/1600w/canva-green-minimalist-catering-service-facebook-post-cjAyx3Jiwmc.jpg">
+ <img src="https://i.pinimg.com/originals/89/35/92/8935922f35a6b64feeac0e7e4ecc44ee.png">
+ <img src="https://i.pinimg.com/736x/56/02/11/5602110a00341cf3155fc05a33c6d8db.jpg">
+ <img src="https://images.template.net/wp-content/uploads/2017/02/13114714/Corporate-Food-Catering-Brochure.jpg">
+ <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm3IH1MIy3piKYeW4g0ep--65HBdniDa7aKg&usqp=CAU">
+</marquee>
+<p class="par">vasavi Caterers serve you the best with the best to serve. From birthday parties, corporate seminars to weddings and related functions, we give you a range of food items to choose for your occasion.</p>
+ </div>  
+ 
+ <br/>
+ <br/>
+ <hr/>
+ <br/>
+ <br/>
+ <h1 class="sectitle" id="aboutus">About Us</h1> 
+ <br/>
+ <div class="par">
+    looking for a perfect food affair to complement your special occasion? Look no further! vasavi Caterers provide a sumptuous food itinerary to fulfill your each and every catering need.<br/> Be it a large, mid or small sized event, our full-range of outdoor and indoor catering services cover complete food preparation and presentation for formal and informal gatherings.<br/>
+
+    From an array of food items to choose from, vasavi Caterers bring to you the best from all cuisines to suit your event,<br/> tastes and pockets even. So while you leave your food worries to us, we let you enjoy those special moments in all the glory. <br/>So let the celebrations begin!!
+
+
+ </div>
+ <br>
+ <br>
+ <hr/>
+ <br>
+ <br>
+ <h1 class="sectitle" id="contactus">Contact Us</h1> 
+             
+<br>
+<br>
+<div class="a">
+ <div class="container">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="topic">Address</div>
+          <div class="text-one">palakollu,534260</div>
+          <div class="text-two"> ganji peta</div>
+        </div>
+        <div class="phone details">
+          <i class="fas fa-phone-alt"></i>
+          <div class="topic">Phone</div>
+          <div class="text-one">9298850926</div>
+          <div class="text-two">9618060406</div>
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic">Email</div>
+          <div class="text-one">vasavicatering@gmail.com</div>
+          
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="topic-text">Send us a message</div>
+        <p>If you have any work from me or any types of quries related to my tutorial, you can send me message from here. It's my pleasure to help you.</p>
+      <form action="#">
+        <div class="input-box">
+          <input type="text" placeholder="Enter your name">
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="Enter your email">
+        </div>
+        <div class="input-box message-box">
+          
+        </div>
+        <div class="button">
+          <input type="button" value="Send Now" >
+        </div>
+      </form>
+    </div>
+    </div>
+</div>
+</div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+</body>
+</form>
+</html>
